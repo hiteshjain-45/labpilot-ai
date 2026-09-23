@@ -28,14 +28,14 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: frontend/package-lock.json
+          cache-dependency-path: labpilot-ai/frontend/package-lock.json
 
       - name: Install dependencies
-        working-directory: frontend
+        working-directory: labpilot-ai/frontend
         run: npm ci
 
       - name: Build frontend
-        working-directory: frontend
+        working-directory: labpilot-ai/frontend
         run: npm run build
 
       - name: Setup Pages
@@ -44,7 +44,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist
+          path: labpilot-ai/frontend/dist
 
   deploy:
     environment:
