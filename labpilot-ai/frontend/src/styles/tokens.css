@@ -1,0 +1,32 @@
+/* Design tokens. The palette comes from the lab bench: fume-hood tile, bottle-green ink and safety-tag yellow. */
+:root {
+  --bench: #edf1ef;
+  --paper: #fbfcfb;
+  --wash: #f2f5f3;
+  --ink: #16302b;
+  --ink-soft: #4a605b;
+  --rule: #cbd6d2;
+  --rule-strong: #9fb1ab;
+  --bottle: #123b33;
+  --bottle-hi: #1d5247;
+  --rail-text: #cfe0da;
+  --signal: #f2b705;
+  --signal-hover: #ffc92b;
+  --signal-ink: #3a2a00;
+
+  --pass: #1b7f4b;
+  --pass-bg: #e1f2e8;
+  --fail: #b4342b;
+  --fail-bg: #f9e4e1;
+  --warn: #855400;
+  --warn-bg: #fff0c7;
+  --info: #245c9a;
+  --info-bg: #e2edf8;
+
+  --font-ui: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono Variable", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --radius: 3px;
+  --gap: 16px;
+  --focus: 0 0 0 3px rgba(36, 92, 154, 0.55);
+}
