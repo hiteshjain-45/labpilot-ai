@@ -20,31 +20,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
-          cache-dependency-path: frontend/package-lock.json
+          cache-dependency-path: labpilot-ai/frontend/package-lock.json
 
-      - name: Install dependencies
-        working-directory: frontend
+      - name: Install frontend dependencies
+        working-directory: labpilot-ai/frontend
         run: npm ci
 
       - name: Build frontend
-        working-directory: frontend
+        working-directory: labpilot-ai/frontend
         run: npm run build
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist
+          path: labpilot-ai/frontend/dist
 
   deploy:
     environment:
